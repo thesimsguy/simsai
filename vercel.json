@@ -1,0 +1,97 @@
+{
+  "devCommand": "bun run dev",
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://os.ryo.lu http://localhost:3000"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/wallpapers/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/icons/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/sounds/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/patterns/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/:path(apple-touch-icon.png|favicon.ico|vite.svg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/:path(manifest.json|all-sounds.json|soundboards.json)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/internet-explorer/:code", "destination": "/" },
+    { "source": "/finder", "destination": "/" },
+    { "source": "/soundboard", "destination": "/" },
+    { "source": "/chats", "destination": "/" },
+    { "source": "/textedit", "destination": "/" },
+    { "source": "/paint", "destination": "/" },
+    { "source": "/photo-booth", "destination": "/" },
+    { "source": "/minesweeper", "destination": "/" },
+    { "source": "/videos", "destination": "/" },
+    { "source": "/ipod", "destination": "/" },
+    { "source": "/synth", "destination": "/" },
+    { "source": "/pc", "destination": "/" },
+    { "source": "/terminal", "destination": "/" },
+    { "source": "/control-panels", "destination": "/" }
+  ]
+}
