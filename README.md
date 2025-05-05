@@ -1,4 +1,4 @@
-![Banner](./public/assets/images/banner.png)
+![Cover](./public/assets/images/cover.png)
 
 # simsOS — Web-based Desktop Environment
 
